@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jhenelle Smith Consulting</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Surbiton Consulting</div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <canvas id="hero-canvas"></canvas>
+            <div class="hero-content">
+                <h1>Surbiton Consulting</h1>
+                <p>Transforming businesses through strategic financial leadership and innovative solutions</p>
+                <a href="#contact" class="cta-button">Get Started</a>
+            </div>
+        </section>
+
+        <section id="services" class="services">
+            <div class="container">
+                <h2>Our Services</h2>
+                <div class="service-grid">
+                    <div class="service-card-container">
+                        <div class="service-card">
+                            <div class="card-front">
+                                <h3>Foundation</h3>
+                                <h4>Ideal for: Early-stage startups establishing core systems</h4>
+                                <p><strong>Services Included:</strong></p>
+                                <ul>
+                                    <li>Initial Consultation</li>
+                                    <li>System Selection</li>
+                                    <li>System Setup</li>
+                                    <li>Chart of Accounts & Payroll Setup</li>
+                                    <li>Benefit Plan Design</li>
+                                    <li>Process Documentation</li>
+                                    <li>Training</li>
+                                </ul>
+                                <button class="contact-button">Contact Us</button>
+                            </div>
+                            <div class="card-back">
+                                <h3>Contact Us for Foundation Package</h3>
+                                <form class="contact-form">
+                                    <input type="text" placeholder="Company Name" required>
+                                    <input type="text" placeholder="Name" required>
+                                    <input type="email" placeholder="Email" required>
+                                    <select id="company-stage" name="company-stage" required>
+                                        <option value="">Select your company stage</option>
+                                        <option value="idea">Idea Stage</option>
+                                        <option value="mvp">MVP/Early Product</option>
+                                        <option value="growth">Growth Stage</option>
+                                        <option value="scaling">Scaling</option>
+                                    </select>
+                                      <select id="revenue-range" name = "revenue-range"required>
+                                        <option value="">Select Annual Revenue Range</option>
+                                        <option value="0-100k">$0 - $100k</option>
+                                        <option value="100k-500k">$100k - $500k</option>
+                                        <option value="500k-1m">$500k - $1M</option>
+                                        <option value="1m-5m">$1M - $5M</option>
+                                        <option value="5m+">$5M+</option>
+                                      </select>
+                                      <select id="company-size" name="company-size" required>
+                                        <option value="">Select company size</option>
+                                        <option value="1-10">1-10 employees</option>
+                                        <option value="11-50">11-50 employees</option>
+                                        <option value="51-200">51-200 employees</option>
+                                        <option value="201+">201+ employees</option>
+                                    </select>
+                                    <textarea placeholder="Message" required></textarea>
+                                    <button type="submit">Send</button>
+                                </form>
+                                <button class="back-button">Back to Services</button>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="service-card-container">
+                        <div class="service-card">
+                            <div class="card-front">
+                                <h3>Growth</h3>
+                                <h4>Ideal for: Growing startups needing system refinement and ongoing support</h4>
+                                <p><strong>Services Included:</strong></p>
+                                <ul>
+                                    <li>System & HR Optimization</li>
+                                    <li>Payroll Management</li>
+                                    <li>Benefit Plan Enrollment</li>
+                                    <li>Monthly Reconciliation & Reporting</li>
+                                    <li>Ad Hoc Support</li>
+                                    <li>Integration Assistance</li>
+                                    <li>Process Improvement</li>
+                                </ul>
+                                <button class="contact-button">Contact Us</button>
+                            </div>
+                            <div class="card-back">
+                                <h3>Contact Us for Growth Package</h3>
+                                <form class="contact-form">
+                                    <input type="text" placeholder="Company Name" required>
+                                    <input type="text" placeholder="Name" required>
+                                    <input type="email" placeholder="Email" required>
+                                    <select id="company-stage" name="company-stage" required>
+                                        <option value="" id = "select-placeholder">Select your company stage</option>
+                                        <option value="idea">Idea Stage</option>
+                                        <option value="mvp">MVP/Early Product</option>
+                                        <option value="growth">Growth Stage</option>
+                                        <option value="scaling">Scaling</option>
+                                    </select>
+                                      <select id="revenue-range" name = "revenue-range"required>
+                                        <option value="" id = "select-placeholder">Select Annual Revenue Range</option>
+                                        <option value="0-100k">$0 - $100k</option>
+                                        <option value="100k-500k">$100k - $500k</option>
+                                        <option value="500k-1m">$500k - $1M</option>
+                                        <option value="1m-5m">$1M - $5M</option>
+                                        <option value="5m+">$5M+</option>
+                                      </select>
+                                      <select id="company-size" name="company-size" required>
+                                        <option value="" id = "select-placeholder">Select company size</option>
+                                        <option value="1-10">1-10 employees</option>
+                                        <option value="11-50">11-50 employees</option>
+                                        <option value="51-200">51-200 employees</option>
+                                        <option value="201+">201+ employees</option>
+                                    </select>
+                                    <textarea placeholder="Message" required></textarea>
+                                    <button type="submit">Send</button>
+                                </form>
+                                <button class="back-button">Back to Services</button>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="service-card-container">
+                        <div class="service-card">
+                            <div class="card-front">
+                                <h3>Scale</h3>
+                                <h4>Ideal for: Scaling startups requiring full-service financial and HR management</h4>
+                                <p><strong>Services Included:</strong></p>
+                                <ul>
+                                    <li>Full Financial & HR Management</li>
+                                    <li>Budgeting, Forecasting & Compensation Planning</li>
+                                    <li>Cash Flow & Payroll Management</li>
+                                    <li>Tax Planning & Compliance</li>
+                                    <li>...and more</li>
+                                    
+                                </ul>
+                                <button class="contact-button">Contact Us</button>
+                            </div>
+                            <div class="card-back">
+                                <h3>Contact Us for Scale Package</h3>
+                                <form class="contact-form">
+                                    <input type="text" placeholder="Company Name" required>
+                                    <input type="text" placeholder="Name" required>
+                                    <input type="email" placeholder="Email" required>
+                                    <select id="company-stage" name="company-stage" required>
+                                        <option value="">Select your company stage</option>
+                                        <option value="idea">Idea Stage</option>
+                                        <option value="mvp">MVP/Early Product</option>
+                                        <option value="growth">Growth Stage</option>
+                                        <option value="scaling">Scaling</option>
+                                    </select>
+                                      <select id="revenue-range" name = "revenue-range"required>
+                                        <option value="">Select Annual Revenue Range</option>
+                                        <option value="0-100k">$0 - $100k</option>
+                                        <option value="100k-500k">$100k - $500k</option>
+                                        <option value="500k-1m">$500k - $1M</option>
+                                        <option value="1m-5m">$1M - $5M</option>
+                                        <option value="5m+">$5M+</option>
+                                      </select>
+                                      <select id="company-size" name="company-size" required>
+                                        <option value="">Select company size</option>
+                                        <option value="1-10">1-10 employees</option>
+                                        <option value="11-50">11-50 employees</option>
+                                        <option value="51-200">51-200 employees</option>
+                                        <option value="201+">201+ employees</option>
+                                    </select>
+                                    <textarea placeholder="Message" required></textarea>
+                                    <button type="submit">Send</button>
+                                </form>
+                                <button class="back-button">Back to Services</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2>About Jhenelle Smith</h2>
+                        <p>With 17 years in accounting and 8 years in executive leadership, Jhenelle Smith brings a wealth of experience across various industries. Her expertise covers everything from detailed financial reporting and budgeting to strategic planning and operational optimization.</p>
+                        <p>Jhenelle's goal is to ensure smooth operations, maintain compliance, and set the stage for future growth in every organization she works with.</p>
+                    </div>
+                    <div class="about-image">
+                        <img src="/api/placeholder/400/400" alt="Jhenelle Smith" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- <section id="contact" class="contact">
+            <div class="container">
+                <h2>Get In Touch</h2>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="company">Company</label>
+                        <input type="text" id="company" name="company" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="company-stage">Company Stage</label>
+                        <select id="company-stage" name="company-stage" required>
+                            <option value="">Select your company stage</option>
+                            <option value="idea">Idea Stage</option>
+                            <option value="mvp">MVP/Early Product</option>
+                            <option value="growth">Growth Stage</option>
+                            <option value="scaling">Scaling</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="company-size">Company Size</label>
+                        <select id="company-size" name="company-size" required>
+                            <option value="">Select company size</option>
+                            <option value="1-10">1-10 employees</option>
+                            <option value="11-50">11-50 employees</option>
+                            <option value="51-200">51-200 employees</option>
+                            <option value="201+">201+ employees</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="company-size">Revenue</label>
+                        <select id="company-size" name="company-size" required>
+                            <option value="">Select range</option>
+                            <option value="0-499k">$0 - $499,999</option>
+                            <option value="500k-999k">$500,000 - $999,999</option>
+                            <option value="1M-5M">$1M - $5M</option>
+                            <option value="5M+">$5M+</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="service-tier">Service Tier Interested In</label>
+                        <select id="service-tier" name="service-tier" required>
+                            <option value="">Select service tier</option>
+                            <option value="tier1">Tier 1: Basic Package</option>
+                            <option value="tier2">Tier 2: Advanced Package</option>
+                            <option value="tier3">Tier 3: Premium Package</option>
+                            <option value="unsure">Not Sure / Need Guidance</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Additional Information</label>
+                        <textarea id="message" name="message" placeholder="Please describe your current financial challenges or specific needs."></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">Send Message</button>
+                </form>
+            </div>
+        </section> -->
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Jhenelle Smith Consulting. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
